@@ -1,9 +1,10 @@
 # AMS
 Airline Management System implemented in C++ console application.
 
+
 Semester project for Object Oriented Programming
 
-Group Members:
-Abdullah Qureshi
-Sohaib Sheikh
-Muaaz Irfan
+#Group Members:
+1. Abdullah Qureshi
+2. Sohaib Sheikh
+3. Muaaz Irfan
