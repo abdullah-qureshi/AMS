@@ -6,5 +6,5 @@ Semester project for Object Oriented Programming
 
 #Group Members:
 1. Abdullah Qureshi
-2. Sohaib Sheikh
+2. Sohaib Ikram
 3. Muaaz Irfan
