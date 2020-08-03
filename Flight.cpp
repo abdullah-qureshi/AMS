@@ -29,6 +29,7 @@ Flight::Flight(int a, string b, string c, int t, float p)
 }
 
 void Flight::set_flight_code(int a){flight_code = a;}
+void Flight::set_airline_code(string a) { airline_code = a; }
 void Flight::set_departure(string b){departure = b;}
 void Flight::set_arrival(string c){arrival = c;}
 void Flight::set_duration(int t){duration = t;}
@@ -58,6 +59,17 @@ void Flight::addPassenger(Passenger newPassenger)
 {
 	passengers.push_back(newPassenger);
 	booked_seats++;
+}
+void Flight::removePassenger(Passenger delPassenger)
+{
+	for (auto passenger = passengers.begin(); passenger != passengers.end(); passenger++)
+	{
+		if (passenger->get_cnic() == delPassenger.get_cnic())
+		{
+			passengers.erase(passenger);
+			break;
+		}
+	}
 }
 void Flight::listPassengers()
 {

@@ -5,6 +5,7 @@
 #include <vector>
 using namespace std;
 
+class AMS;
 class Flight;
 class Passenger; //Forward declaration to avoid any errors.
 class Flight
@@ -20,8 +21,11 @@ public:
 	Flight();
 	//Constructor
 	Flight(int, string, string,int, float); // Code, Departure, Arrival, Duration, Ticket Price
+	//Flight(string); // Airline code
+
 	//Setter functions
 	void set_flight_code(int);
+	void set_airline_code(string);
 	void set_duration(int);
 	void set_departure(string);
 	void set_arrival(string);
@@ -41,8 +45,10 @@ public:
 
 	//Add Passenger to Flight
 	void addPassenger(Passenger);
+	void removePassenger(Passenger);
 	void listPassengers(); //List all passengers on current flight.
 	void printDetails(string) const; // Print all details of flight in tabular form.
+
 	
 };
 
@@ -59,7 +65,7 @@ public:
 	Passenger();
 	Passenger(string, string, string, string, string); // FirstName,LastName,Phone Number, CNIC, Email.
 
-	//Settersh
+	//Setters
 	void set_first_name(string a) { first_name = a; }
 	void set_last_name(string a) { last_name = a; }
 	void set_full_name() { full_name = first_name + " " + last_name; }
@@ -78,15 +84,12 @@ public:
 
 	//Book a flight.
 	void addFlight(Flight);
+	//Remove a booked flight
+	void removeFlight(Flight);
+	//Check if user is booked on a flight.
+	bool checkFlight(Flight);//Return 1 if user is booked and 0 if user is not booked.
 	//List Booked flights for a passenger.
 	void listBookedFlights();
-	//void deletion();
-	//void add_passenger();
 	void details();
-	//int search_passenger_byname(std::string);
-	//int search_passenger_bynumber(std::string);
-	//int check();
-	//int verify();
-	//void friend editor(passenger& obj);
 };
 
